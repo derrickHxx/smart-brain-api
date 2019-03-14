@@ -13,9 +13,9 @@ const db = knex({
   client: 'pg',
   connection: {
     host : '127.0.0.1',
-    user : 'aneagoie',
-    password : '',
-    database : 'smart-brain'
+    user : 'derrick',
+    password : 'Hxx411101',
+    database : 'smart-brain'    
   }
 });
 
@@ -24,7 +24,8 @@ const app = express();
 app.use(cors())
 app.use(bodyParser.json());
 
-app.get('/', (req, res)=> { res.send(db.users) })
+// app.get('/', (req, res)=> { res.send(db.users) })
+app.get('/',(req,res)=>{res.send("ITS WORKING!!!")})
 app.post('/signin', signin.handleSignin(db, bcrypt))
 app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt) })
 app.get('/profile/:id', (req, res) => { profile.handleProfileGet(req, res, db)})
@@ -34,3 +35,10 @@ app.post('/imageurl', (req, res) => { image.handleApiCall(req, res)})
 app.listen(3000, ()=> {
   console.log('app is running on port 3000');
 })
+
+
+
+
+
+
+

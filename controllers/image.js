@@ -1,8 +1,12 @@
 const Clarifai = require('clarifai');
 
 //You must add your own API key here from Clarifai.
+
+//This is Derrick's API key
+
+//Just for study purpose so I am not hiding it via dotenv
 const app = new Clarifai.App({
- apiKey: 'YOUR_API_KEY_HERE'
+ apiKey: '89089bce7c9645be8b57183752125754'
 });
 
 const handleApiCall = (req, res) => {
