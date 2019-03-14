@@ -1,1 +1,9 @@
 /node_modules
+
+/.je-project-settings
+
+.flowconfig
+
+smart-brain-api.sublime-project
+
+smart-brain-api.sublime-workspace
